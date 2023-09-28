@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Vokabeltrainer</title>
+  </head>
+  <body>
+    <header>
+      <img src=".//assets/img/logo_vocabulary.png" alt="logo" />
+    </header>
+    <main>
+      <div class="container-trainer">
+        <div class="container-description">
+          <h1>
+            VOCABULARY <br />
+            TRAINER
+          </h1>
+          <p>
+            Do you learn new words, but forget them after a while? Create your
+            own library and improve your vocabulary by typing in the translation
+            and check if it's right.
+          </p>
+          <button id="restartButton" onclick="restartVocabularyTrainer()">
+            START TRAINING
+          </button>
+        </div>
+        <div class="question-card" id="question-card">
+          <div class="counter">
+            <div id="result"></div>
+            <div id="counter"></div>
+          </div>
+          <div class="question" id="question"></div>
+          <div class="answer-and-button">
+            <div id="translation"></div>
+            <input type="text" id="answer" placeholder="TYPE HERE" />
+            <button id="btn-check" onclick="checkAnswer()">CHECK</button>
+            <button
+              class="btn-next-vocabulary"
+              id="btn-next-vocabulary"
+              style="display: none"
+              onclick="nextQuestion()"
+              ;
+            >
+              NEXT VOCABULARY
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <section class="bottom">
+        <div class="container-addvocabulary">
+          <h2>
+            ADD NEW<br />
+            VOCABULARY
+          </h2>
+          <p>
+            Type your new word and the translation and create your personal
+            vocabulary list.
+          </p>
+          <input type="text" id="newQuestion" placeholder="VOCABULARY" />
+          <input type="text" id="newAnswer" placeholder="TRANSLATION" />
+          <button onclick="addCustomVocabulary()">ADD TO LIBRARY</button>
+        </div>
+        <div class="container_list">
+          <h2>
+            MY PERSONAL <br />
+            VOCABULARY LIST
+          </h2>
+          <div class="list-button">
+            <button id="btn-list" onclick="toggleCustomVocabulary()">
+              SHOW LIST
+            </button>
+          </div>
+
+          <div class="container_vocabulary">
+            <ul
+              class="customVocabularyList"
+              id="customVocabularyList"
+              style="display: none"
+            ></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><p>Project by Andre Frost | Jan Siede | Susann Gailus</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
