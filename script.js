@@ -20,7 +20,7 @@ function checkAnswer() {
   let userAnswer = answerInput.value.trim().toLowerCase();
 
   let questionWord = document.getElementById("question-card");
-  if (userAnswer === currentVocabulary.answer) {
+  if (userAnswer === currentVocabulary.answer.toLowerCase()) {
     questionWord.classList = "question-card question-color-green";
     vocabularyRepeat.splice(currentIndex, 1);
     correctCount++;
